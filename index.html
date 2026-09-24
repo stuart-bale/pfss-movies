@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PFSS iso-B surface - PSP view</title>
+<meta name="description" content="Movies of the iso-|B| PFSS source surface seen from Parker Solar Probe, 2018-2026.">
+<style>
+  :root { --bg:#0B0F14; --fg:#E8EEF3; --muted:#8B97A4; --line:#1E2731; --accent:#7FB3FF; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 16px; }
+  header { padding-block:48px 24px; border-bottom:1px solid var(--line); }
+  h1 { font-size:clamp(24px,4vw,34px); line-height:1.2; margin:0 0 8px; }
+  .byline { color:var(--muted); margin:0; }
+  .intro { padding-block:24px; border-bottom:1px solid var(--line); }
+  .intro p { margin:0 0 12px; }
+  .legend { list-style:none; margin:12px 0 0; padding:0; display:grid; gap:6px;
+             grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+  .legend li { display:flex; gap:8px; align-items:baseline; color:var(--muted); font-size:14px; }
+  .sw { flex:0 0 14px; height:4px; border-radius:2px; margin-top:8px; }
+  h2 { font-size:20px; margin:40px 0 0; }
+  .card { padding-block:24px; border-bottom:1px solid var(--line); }
+  .card h3 { font-size:18px; margin:0 0 12px; }
+  video { width:100%; height:auto; max-width:100%; background:#000; border-radius:6px; display:block; }
+  .blurb { color:var(--muted); font-size:15px; margin:12px 0 0; }
+  .meta { display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin:12px 0 0; font-size:14px; }
+  .meta span { color:var(--muted); }
+  a { color:var(--accent); }
+  footer { padding-block:32px 64px; color:var(--muted); font-size:14px; }
+  footer p { margin:0 0 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>PFSS iso-B surface - PSP view</h1>
+  <p class="byline">The PFSS source surface over the Parker Solar Probe mission, 2018&ndash;2026
+     &mdash; S. D. Bale, UC Berkeley / Imperial College</p>
+</header>
+
+<section class="intro">
+  <p>Each frame views the source surface from Parker Solar Probe's Carrington longitude and latitude, from launch
+     in 2018 August through 2026 September. Time steps are adaptive: near perihelion PSP moves &sim;200&deg; in
+     Carrington longitude in &sim;1.5 days, so the encounters run in slow motion. Encounters 1&ndash;29 are labelled.</p>
+  <p>The surface is a PFSS solution driven by the ADAPT-GONG magnetogram nearest the middle of each Carrington
+     rotation (CR2207&ndash;CR2315), with the outer boundary at 6&nbsp;R<sub>S</sub>. Rather than a sphere we draw the
+     surface of constant |<em>B</em>|, scaled to an area-weighted mean radius of 2.5&nbsp;R<sub>S</sub>: it is
+     elevated where the field is weak and depressed where it is strong. Colour is <em>B</em><sub>r</sub> on that
+     surface, fixed at &plusmn;0.193&nbsp;G. Between rotations the surface is interpolated in time.</p>
+  <p>Measured polarities are mapped onto the surface: PSP footpoints (FIELDS, trailing 3 days), the 1&nbsp;AU sector
+     polarity from OMNI mapped back along the Parker spiral (white outline, trailing 27 days), and
+     sign(<em>B</em><sub>R</sub>) from Solar Orbiter since 2025 February (no outline, trailing one rotation), mapped
+     at 375&nbsp;km&nbsp;s<sup>&minus;1</sup>.</p>
+  <ul class="legend">
+    <li><span class="sw" style="background:#45E578"></span>coronal-hole boundaries (2.5&nbsp;R<sub>&#9737;</sub> PFSS)</li>
+    <li><span class="sw" style="background:#000;outline:1px solid #555"></span>PFSS neutral line</li>
+    <li><span class="sw" style="background:linear-gradient(90deg,#FF2619,#2673FF)"></span>PSP footpoints, measured polarity</li>
+    <li><span class="sw" style="background:linear-gradient(90deg,#FF2619,#2673FF);outline:1px solid #fff"></span>1&nbsp;AU polarity from OMNI, mapped back</li>
+    <li><span class="sw" style="background:linear-gradient(90deg,#FF2619,#2673FF);opacity:.85"></span>Solar Orbiter B<sub>R</sub> (from 2025-02)</li>
+    <li><span class="sw" style="background:#FFD633"></span>point directly below the spacecraft</li>
+  </ul>
+</section>
+
+      <article class="card" id="from_psp">
+        <h3>The view from PSP</h3>
+        <video controls preload="none" playsinline poster="movies/from_psp.jpg" width="990" height="880">
+          <source src="movies/from_psp.mp4" type="video/mp4">
+          Your browser cannot play this video; use the download links below.
+        </video>
+        <p class="blurb">7987 frames, 2018 August 19 &ndash; 2026 September 12.</p>
+        <p class="meta"><span>5:19</span>
+          <a href="movies/from_psp.mp4" download>720p &middot; 18 MB</a>
+          <a href="movies/from_psp_full.mp4" download>full resolution &middot; 90 MB</a></p>
+      </article>
+      <article class="card" id="from_psp_3x">
+        <h3>The same, 3&times; faster</h3>
+        <video controls preload="none" playsinline poster="movies/from_psp_3x.jpg" width="990" height="880">
+          <source src="movies/from_psp_3x.mp4" type="video/mp4">
+          Your browser cannot play this video; use the download links below.
+        </video>
+        
+        <p class="meta"><span>1:46</span>
+          <a href="movies/from_psp_3x.mp4" download>720p &middot; 11 MB</a>
+          <a href="movies/from_psp_3x_full.mp4" download>full resolution &middot; 57 MB</a></p>
+      </article>
+
+<footer>
+  <p>Magnetograms: ADAPT-GONG (NSO/NSF). Spacecraft data: PSP/FIELDS, OMNI (NASA/GSFC via CDPP&nbsp;AMDA),
+     Solar Orbiter/MAG. PFSS solutions with <a href="https://pfsspy.readthedocs.io/">pfsspy</a>.</p>
+  <p>Interactive viewer for the individual encounters:
+     <a href="https://stuart-bale.github.io/pfss-viewer/">stuart-bale.github.io/pfss-viewer</a>.</p>
+  <p>Movies rendered with <code>cr_frames.py</code>; page regenerated by <code>publish_movies.sh</code>.</p>
+</footer>
+</div>
+</body>
+</html>
